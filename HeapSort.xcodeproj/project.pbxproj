@@ -14,6 +14,7 @@
 		D633E2A11F0E87760060ED7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D633E2A01F0E87760060ED7C /* Assets.xcassets */; };
 		D633E2A41F0E87760060ED7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D633E2A21F0E87760060ED7C /* LaunchScreen.storyboard */; };
 		D633E2AF1F0E87760060ED7C /* HeapSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E2AE1F0E87760060ED7C /* HeapSortTests.m */; };
+		D633E2BA1F0E87D60060ED7C /* PriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E2B91F0E87D60060ED7C /* PriorityQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D633E2AA1F0E87760060ED7C /* HeapSortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeapSortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D633E2AE1F0E87760060ED7C /* HeapSortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSortTests.m; sourceTree = "<group>"; };
 		D633E2B01F0E87760060ED7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D633E2B91F0E87D60060ED7C /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
+		D633E2BB1F0E87FC0060ED7C /* PriorityQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				D633E2A21F0E87760060ED7C /* LaunchScreen.storyboard */,
 				D633E2A51F0E87760060ED7C /* Info.plist */,
 				D633E2941F0E87760060ED7C /* Supporting Files */,
+				D633E2B91F0E87D60060ED7C /* PriorityQueue.m */,
+				D633E2BB1F0E87FC0060ED7C /* PriorityQueue.h */,
 			);
 			path = HeapSort;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				TargetAttributes = {
 					D633E2901F0E87760060ED7C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 869Y9X4CHA;
 						ProvisioningStyle = Automatic;
 					};
 					D633E2A91F0E87760060ED7C = {
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D633E29C1F0E87760060ED7C /* ViewController.m in Sources */,
+				D633E2BA1F0E87D60060ED7C /* PriorityQueue.m in Sources */,
 				D633E2991F0E87760060ED7C /* AppDelegate.m in Sources */,
 				D633E2961F0E87760060ED7C /* main.m in Sources */,
 			);
@@ -353,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 869Y9X4CHA;
 				INFOPLIST_FILE = HeapSort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DimSum.HeapSort;
@@ -364,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 869Y9X4CHA;
 				INFOPLIST_FILE = HeapSort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DimSum.HeapSort;

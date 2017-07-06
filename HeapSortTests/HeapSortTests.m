@@ -1,12 +1,5 @@
-//
-//  HeapSortTests.m
-//  HeapSortTests
-//
-//  Created by Michael Matranga on 7/6/17.
-//  Copyright © 2017 Michael Matranga. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
+#import "PriorityQueue.h"
 
 @interface HeapSortTests : XCTestCase
 
@@ -16,24 +9,63 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void) testExample
+{
+    PriorityQueue* priorityQueue = [[PriorityQueue alloc] initWithSize:10];
+
+    XCTAssertTrue(priorityQueue.length == 0, @"Not Initialized");
+
+    [priorityQueue insert:@10000];
+    [priorityQueue insert:@100];
+    [priorityQueue insert:@1000];
+    [priorityQueue insert:@10];
+    [priorityQueue insert:@1];
+
+    XCTAssertTrue(priorityQueue.length == 5, @"Not Inserting");
+
+
+    XCTAssert([[[priorityQueue array] objectAtIndex:0] integerValue] == 1, @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:1] integerValue] == 10, @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:2] integerValue] == 1000, @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:3] integerValue] == 10000, @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:4] integerValue] == 100, @"NOOOOOOO");
+
+    XCTAssert([[priorityQueue popMin] integerValue] == 1, @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] integerValue] == 10, @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] integerValue] == 100, @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] integerValue] == 1000, @"NOOOOOOO");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void) testExample2
+{
+    PriorityQueue* priorityQueue = [[PriorityQueue alloc] initWithSize:10];
+
+    XCTAssertTrue(priorityQueue.length == 0, @"Not Initialized");
+
+    [priorityQueue insert:@"10000"];
+    [priorityQueue insert:@"100"];
+    [priorityQueue insert:@"1000"];
+    [priorityQueue insert:@"10"];
+    [priorityQueue insert:@"1"];
+
+    XCTAssertTrue(priorityQueue.length == 5, @"Not Inserting");
+
+    XCTAssert([[[priorityQueue array] objectAtIndex:0] isEqualToString: @"1"], @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:1] isEqualToString: @"10"], @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:2] isEqualToString: @"1000"], @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:3] isEqualToString: @"10000"], @"NOOOOOOO");
+    XCTAssert([[[priorityQueue array] objectAtIndex:4] isEqualToString: @"100"], @"NOOOOOOO");
+
+    XCTAssert([[priorityQueue popMin] isEqual:@"1"], @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] isEqual:@"10"], @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] isEqual:@"100"], @"NOOOOOOO");
+    XCTAssert([[priorityQueue popMin] isEqual:@"1000"], @"NOOOOOOO");
 }
 
 @end
